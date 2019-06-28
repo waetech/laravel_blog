@@ -5,18 +5,19 @@ namespace App\Http\Controllers;
 class PagesController extends Controller {
 
     public function getIndex() {
-        #process variable data or params
-        #talk to the model
-        #receive from the model
-        #compile or process data from the model
-        #pass that data to the correct view
         return view('pages.welcome');
-        
-
     }
 
     public function getAbout() {
-        return view('pages.about');
+        $first = 'Alex';
+        $last = 'Curtis';
+
+        $fullname = $first . " " . $last;
+        $email = 'alex@jcurtis.com';
+        $data = [];
+        $data['email'] = $email;
+        $data['fullname'] = $fullname;
+        return view('pages.about')->with("data", $data);
 
     }
 
