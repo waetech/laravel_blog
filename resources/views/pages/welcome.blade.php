@@ -1,5 +1,7 @@
 @extends('main')
 
+@section('title', '| Homepage')
+
 @section('content')
 
 <div class="row">
@@ -57,3 +59,4 @@
 
 </div>
 @endsection
+
