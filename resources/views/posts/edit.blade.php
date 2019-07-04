@@ -37,9 +37,15 @@
                        
                     </div>
                 </div>
+                <div class="row">
+                        <div class="col-md-12">
+                            {{ HTML::LinkRoute('posts.index', '<< See All Posts', array(), ['class' => 'btn btn-info btn-block btn-h1-spacing']) }}
+                        </div>
+                    </div>
         </div>
     </div>
     {!! Form::close() !!}
 </div><!--End of the .row form-->
+
 
 @endsection
