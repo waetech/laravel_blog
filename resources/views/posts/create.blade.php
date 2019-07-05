@@ -18,6 +18,11 @@
               <label name="title">Title:</label>
             <input id="title" name="title" class="form-control">
             </div>
+
+            {{ Form::label('slug', 'Slug:')}}
+            {{ Form::text('slug', null, array('class' => 'form-control', 'required', 'minlength' => '5', 'maxlength' => '255') ) }}
+
+
             <div class="form-group">
               <label name="body">Post Body:</label>
             <textarea id="body" name="body" rows="10" class="form-control"></textarea>
