@@ -15,7 +15,7 @@
         <div class="well">
                 <dl class="dl-horizontal">
                         <dt>Url Slug:</dt>
-                <dd><a href="{{ url($post->slug) }}">{{url($post->slug)}} </dd>
+                <dd><a href="{{ route('blog.single', $post->slug) }}">{{ route('blog.single', $post->slug) }} </dd>
                     </dl>
             <dl class="dl-horizontal">
                 <dt>Created At:</dt>
