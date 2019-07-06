@@ -9,6 +9,9 @@
           <li class="{{ Request::is('/') ? "active" : "" }}">
               <a class="nav-link" href="/">Home</a>
             </li>
+            <li class="{{ Request::is('blog') ? "active" : "" }}">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
             <li class="{{ Request::is('about') ? "active" : "" }}">
               <a class="nav-link" href="/about">About</a>
             </li>
@@ -16,20 +19,20 @@
                     <a class="nav-link" href="/contact">Contact</a>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="dropdown nav navbar-nav navbar-right">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+              <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Account
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{{ route('posts.index') }}">Posts</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logout</a>
             </li>
           </ul>
           
