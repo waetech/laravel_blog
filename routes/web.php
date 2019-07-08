@@ -16,3 +16,12 @@ Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 Route::resource('posts', 'PostController');
+
+//Authentication routes
+Route::get('auth/login', ['uses' => 'Auth\LoginController@Login'] );
+Route::post('auth/login', 'Auth\LoginController@postLogin');
+Route::get('auth/logout', 'Auth\LoginController@getLogout');
+
+//Registration routes
+Route::get('auth/register', 'Auth\RegisterController@getRegister');
+Route::post('auth/register', 'Auth\RegisterController@postRegister');
