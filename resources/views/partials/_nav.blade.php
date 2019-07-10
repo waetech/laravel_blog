@@ -25,14 +25,14 @@
                 My Account
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="{{ route('posts.index') }}">Posts</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+             <li><a class="dropdown-item" href="{{ route('posts.index') }}">Posts</a></li>
+              <li><a class="dropdown-item" href="{{ route('categories.index') }}">Categories</a></li>
+              <li role="separator" class="dropdown-divider"></li>
+              
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+              <a class="nav-link disabled" href="{{route('logout')}}" tabindex="-1" aria-disabled="true">Logout</a>
             </li>
           </ul>
           
